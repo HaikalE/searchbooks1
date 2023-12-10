@@ -106,12 +106,14 @@ const BookSearch = () => {
       {/* Details Modal or Section */}
       {selectedBook && (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
-    <div className="bg-white p-8 rounded-md max-w-md w-full mx-4 sm:mx-auto">
+    <div className="bg-white p-8 rounded-md max-w-md w-full mx-4 sm:mx-auto overflow-y-auto max-h-80">
       <button onClick={handleCloseDetails} className="float-right">
         Close
       </button>
       {/* Display book details */}
-      <h2 className="text-lg font-semibold">{selectedBook.volumeInfo.title}</h2>
+      <h2 className="text-lg font-semibold">
+        {selectedBook.volumeInfo.title}
+      </h2>
       <p className="text-sm text-gray-600">
         {selectedBook.volumeInfo.authors
           ? selectedBook.volumeInfo.authors.join(', ')
