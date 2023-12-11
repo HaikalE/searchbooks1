@@ -57,7 +57,7 @@ const BookSearch = () => {
       <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-6">
         {loading ? (
           <div className="col-span-2 md:col-span-3 flex items-center justify-center">
-            <div className="loader"></div>
+            <div className="loader">Loading...</div>
           </div>
         ) : (
           books.map((book) => (
